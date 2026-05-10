@@ -151,7 +151,7 @@ export default function HomePage() {
           </div>
           <button
             onClick={scrollToForm}
-            className="bg-brand-green hover:brightness-95 text-brand-dark font-bold px-3 sm:px-5 py-2 sm:py-2.5 text-sm sm:text-base transition flex items-center gap-1.5"
+            className="bg-brand-green hover:brightness-95 text-brand-dark font-bold px-3 sm:px-5 py-2.5 text-sm sm:text-base transition flex items-center gap-1.5"
           >
             Start Your $7 Trial
             <ArrowRight className="w-4 h-4" strokeWidth={3} />
@@ -180,7 +180,7 @@ export default function HomePage() {
               Not 1:1 Tutoring
             </span>
 
-            <h1 className="mt-6 text-[2.6rem] sm:text-6xl lg:text-7xl font-black leading-[0.98] tracking-tight">
+            <h1 className="mt-6 text-[2rem] sm:text-5xl lg:text-7xl font-black leading-[0.98] tracking-tight">
               Your child&apos;s confidence in math{" "}
               <span className="relative inline-block">
                 <span className="relative z-10">starts here.</span>
@@ -239,7 +239,7 @@ export default function HomePage() {
                     onChange={(e) =>
                       handleHeroGradeChange(e.target.value as Grade)
                     }
-                    className="w-full appearance-none bg-white border-2 border-brand-dark px-4 py-3.5 pr-10 font-semibold text-brand-dark focus:outline-none focus:border-brand-blue"
+                    className="w-full appearance-none bg-white border-2 border-brand-dark px-4 py-3.5 pr-10 text-base font-semibold text-brand-dark focus:outline-none focus:border-brand-blue"
                   >
                     <option value="">Choose a grade...</option>
                     {GRADES.map((g) => (
@@ -631,7 +631,7 @@ export default function HomePage() {
               <span className="w-1.5 h-1.5 bg-brand-green" />
               See it for yourself
             </span>
-            <h2 className="mt-4 text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.05]">
+            <h2 className="mt-4 text-2xl sm:text-4xl lg:text-6xl font-black tracking-tight leading-[1.05]">
               Real classes. Real students. See how Eddie makes math click, one building block at a time.
             </h2>
           </div>
@@ -672,7 +672,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="lg:col-span-7 grid grid-cols-3 gap-3 sm:gap-4">
+            <div className="lg:col-span-7 grid grid-cols-3 gap-2 sm:gap-4">
               <BigStat number="21K+" label="Students" />
               <BigStat number="1,700+" label="Reviews" />
               <BigStat number="4.8★" label="Rating" accent />
@@ -947,7 +947,7 @@ export default function HomePage() {
                       }
                       placeholder="(555) 555-5555"
                       autoComplete="tel"
-                      className="flex-1 border-2 border-brand-dark px-3 py-3 focus:outline-none focus:border-brand-blue"
+                      className="flex-1 border-2 border-brand-dark px-3 py-3 text-base focus:outline-none focus:border-brand-blue"
                     />
                   </div>
                   {touched.phone && errors.phone && (
@@ -974,7 +974,7 @@ export default function HomePage() {
                       onBlur={() =>
                         setTouched((t) => ({ ...t, grade: true }))
                       }
-                      className="w-full appearance-none border-2 border-brand-dark px-3 py-3 pr-10 bg-white font-semibold focus:outline-none focus:border-brand-blue"
+                      className="w-full appearance-none border-2 border-brand-dark px-3 py-3 pr-10 bg-white text-base font-semibold focus:outline-none focus:border-brand-blue"
                     >
                       <option value="">Choose a grade...</option>
                       {GRADES.map((g) => (
@@ -1089,7 +1089,7 @@ function ResultCell({
         accent ? "bg-brand-blue" : "bg-brand-dark"
       } ${
         last
-          ? "border-t-2 md:border-t-0 md:border-l-2 border-white"
+          ? "md:border-l-2 border-white"
           : "border-b-2 md:border-b-0 md:border-r-2 border-white"
       }`}
     >
@@ -1118,15 +1118,15 @@ function BigStat({
 }) {
   return (
     <div
-      className={`border-2 border-brand-dark p-5 sm:p-7 ${
+      className={`border-2 border-brand-dark p-3 sm:p-5 lg:p-7 ${
         accent ? "bg-brand-blue text-white" : "bg-white text-brand-dark"
       }`}
     >
-      <div className="text-3xl sm:text-5xl font-black tracking-tighter leading-none">
+      <div className="text-xl sm:text-3xl lg:text-5xl font-black tracking-tighter leading-none">
         {number}
       </div>
       <div
-        className={`mt-2 text-xs sm:text-sm font-bold uppercase tracking-wider ${
+        className={`mt-2 text-[10px] sm:text-xs font-bold uppercase tracking-wider ${
           accent ? "text-white/80" : "text-brand-dark/60"
         }`}
       >
@@ -1220,7 +1220,7 @@ function Field({
         placeholder={placeholder}
         autoComplete={autoComplete}
         aria-invalid={!!error}
-        className={`w-full border-2 px-3 py-3 focus:outline-none focus:border-brand-blue ${
+        className={`w-full border-2 px-3 py-3 text-base focus:outline-none focus:border-brand-blue ${
           error ? "border-[#ff0000]" : "border-brand-dark"
         }`}
       />
