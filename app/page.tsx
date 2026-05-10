@@ -47,7 +47,7 @@ const FEATURED_REVIEW_INDEXES = [5, 1, 6, 3];
 const FAQS = [
   {
     q: "What if my child is really behind?",
-    a: "Our teacher assesses your child's level on day one and paces lessons accordingly. The 24/7 AI coach fills in knowledge gaps between classes. 78% of students catch up within the first month.",
+    a: "Our teacher assesses your child's level on day one and paces lessons accordingly. The 24/7 AI coach fills in knowledge gaps between classes. Most students see measurable progress within the first month.",
   },
   {
     q: "Can they keep up with the other kids?",
@@ -321,13 +321,13 @@ export default function HomePage() {
               {/* Top stat card */}
               <div className="bg-brand-green border-2 border-brand-dark p-6 sm:p-7">
                 <div className="text-xs font-bold uppercase tracking-wider text-brand-dark/70">
-                  After 30 days
+                  Real result
                 </div>
-                <div className="mt-2 text-6xl sm:text-7xl font-black tracking-tighter leading-none text-brand-dark">
-                  78%
-                </div>
-                <div className="mt-2 text-base font-bold text-brand-dark leading-snug">
-                  of students catch up to grade level.
+                <p className="mt-2 text-2xl sm:text-3xl font-black tracking-tight leading-snug text-brand-dark">
+                  &ldquo;She failed her last geometry test. Three weeks in with Eddie and she got a B+.&rdquo;
+                </p>
+                <div className="mt-3 text-xs font-semibold text-brand-dark/60">
+                  Aisha B. · Atlanta, GA
                 </div>
               </div>
 
@@ -342,11 +342,10 @@ export default function HomePage() {
                   ))}
                 </div>
                 <p className="text-sm sm:text-base font-semibold text-brand-dark leading-snug">
-                  &ldquo;She failed her last geometry test. Three weeks in, she
-                  got a B+.&rdquo;
+                  &ldquo;My daughter went from dreading homework to asking for extra problems.&rdquo;
                 </p>
                 <div className="mt-3 text-xs text-brand-dark/60 font-medium">
-                  Aisha B. · Atlanta, GA
+                  Jennifer M. · San Diego, CA
                 </div>
               </div>
 
@@ -398,7 +397,7 @@ export default function HomePage() {
               icon={<Zap className="w-7 h-7" strokeWidth={2.5} />}
               stat="30 days"
               title="From behind to caught up."
-              body="78% of students reach grade level within the first month, without homework battles."
+              body="Students go from behind to grade level, without homework battles or rotating tutors."
             />
             <ResultCell
               icon={<Repeat className="w-7 h-7" strokeWidth={2.5} />}
@@ -453,7 +452,14 @@ export default function HomePage() {
                   <div className="text-[10px] uppercase tracking-wider font-bold">
                     Lead teacher
                   </div>
-                  <div className="text-sm font-bold">@EddieDoesMath</div>
+                  <a
+                    href="https://www.instagram.com/eddiedoes.math/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-bold hover:underline"
+                  >
+                    @EddieDoesMath
+                  </a>
                 </div>
               </div>
             </div>
@@ -616,6 +622,35 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
+          3.5. VIDEO — See Eddie in action
+          ============================================================ */}
+      <section className="bg-brand-dark text-white border-b-2 border-brand-dark">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-24">
+          <div className="max-w-3xl mb-10 sm:mb-14">
+            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-brand-green">
+              <span className="w-1.5 h-1.5 bg-brand-green" />
+              See it for yourself
+            </span>
+            <h2 className="mt-4 text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.05]">
+              Real classes. Real students. See how Eddie makes math click, one building block at a time.
+            </h2>
+          </div>
+
+          <div className="border-2 border-white/20 overflow-hidden">
+            <video
+              controls
+              poster="/assets/img/eddie_3.webp"
+              className="w-full"
+              preload="metadata"
+            >
+              <source src="/assets/video/MES_intro.mp4" type="video/mp4" />
+              Your browser doesn&apos;t support video.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
           5. SOCIAL PROOF
           ============================================================ */}
       <section className="bg-white border-b-2 border-brand-dark">
@@ -717,9 +752,16 @@ export default function HomePage() {
                 ))}
               </ul>
 
+              <div className="mt-6 flex items-center gap-3 bg-brand-green/10 border-2 border-brand-green px-4 py-3">
+                <Check className="w-5 h-5 text-brand-blue shrink-0" strokeWidth={3} />
+                <span className="font-bold text-sm sm:text-base">
+                  30-Day Money-Back Guarantee — not satisfied? Full refund, no questions asked.
+                </span>
+              </div>
+
               <button
                 onClick={scrollToForm}
-                className="mt-8 bg-brand-green hover:brightness-95 text-brand-dark font-bold px-6 py-4 text-lg transition w-full sm:w-auto sm:self-start inline-flex items-center justify-center gap-2"
+                className="mt-6 bg-brand-green hover:brightness-95 text-brand-dark font-bold px-6 py-4 text-lg transition w-full sm:w-auto sm:self-start inline-flex items-center justify-center gap-2"
               >
                 Start Your $7 Trial
                 <ArrowRight className="w-5 h-5" strokeWidth={3} />
@@ -747,7 +789,7 @@ export default function HomePage() {
               </ul>
               <div className="mt-auto pt-8">
                 <div className="bg-brand-green text-brand-dark px-4 py-3 font-bold text-center">
-                  4x cheaper, more support
+                  Up to 5x cheaper, more support
                 </div>
               </div>
             </div>
@@ -983,6 +1025,10 @@ export default function HomePage() {
               <Calendar className="w-4 h-4 text-brand-green" strokeWidth={3} />
               First class this week
             </span>
+            <span className="flex items-center gap-2 font-bold text-white">
+              <Check className="w-4 h-4 text-brand-green" strokeWidth={3} />
+              30-Day Money-Back Guarantee
+            </span>
           </div>
         </div>
       </section>
@@ -1188,7 +1234,6 @@ function Field({
 }
 
 function SuccessState({ firstName }: { firstName: string }) {
-  const daysToFirstClass = 2;
   return (
     <div className="text-center py-8">
       <div className="w-16 h-16 bg-brand-green mx-auto flex items-center justify-center border-2 border-brand-dark">
@@ -1198,9 +1243,7 @@ function SuccessState({ firstName }: { firstName: string }) {
         Thank you{firstName ? `, ${firstName}` : ""}!
       </h3>
       <p className="mt-4 text-brand-dark/80 max-w-md mx-auto text-lg leading-relaxed">
-        Check your email to confirm. Your first class is in{" "}
-        <strong>{daysToFirstClass} days</strong>. We&apos;ll text you the link
-        an hour before.
+        Check your email to confirm. Your first class is this week — we&apos;ll text you the link an hour before.
       </p>
     </div>
   );
