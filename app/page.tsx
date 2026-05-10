@@ -80,6 +80,11 @@ function validate(state: FormState): FormErrors {
   return errors;
 }
 
+// --- Helpers ---------------------------------------------------------------
+
+const asset = (path: string) =>
+  `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
+
 // --- Page ------------------------------------------------------------------
 
 export default function HomePage() {
@@ -353,7 +358,7 @@ export default function HomePage() {
               <div className="relative -mt-2 mr-4 sm:mr-10 bg-brand-dark text-white border-2 border-brand-dark p-4 sm:p-5 flex items-center gap-4">
                 <div className="relative w-14 h-14 sm:w-16 sm:h-16 shrink-0 border-2 border-brand-green overflow-hidden">
                   <Image
-                    src="/assets/img/eddie_1.webp"
+                    src={asset("/assets/img/eddie_1.webp")}
                     alt="Eddie Kang"
                     fill
                     sizes="64px"
@@ -441,7 +446,7 @@ export default function HomePage() {
                 <div className="absolute -top-3 -left-3 right-6 bottom-6 bg-brand-blue z-0" aria-hidden />
                 <div className="relative z-10 aspect-[4/5] border-2 border-brand-dark overflow-hidden bg-white">
                   <Image
-                    src="/assets/img/eddie_4.webp"
+                    src={asset("/assets/img/eddie_4.webp")}
                     alt="Eddie Kang, MyEdSpace lead math teacher"
                     fill
                     sizes="(min-width: 1024px) 32vw, 80vw"
@@ -639,11 +644,11 @@ export default function HomePage() {
           <div className="border-2 border-white/20 overflow-hidden">
             <video
               controls
-              poster="/assets/img/eddie_3.webp"
+              poster={asset("/assets/img/eddie_3.webp")}
               className="w-full"
               preload="metadata"
             >
-              <source src="/assets/video/MES_intro.mp4" type="video/mp4" />
+              <source src={asset("/assets/video/MES_intro.mp4")} type="video/mp4" />
               Your browser doesn&apos;t support video.
             </video>
           </div>
