@@ -273,7 +273,7 @@ export default function HomePage() {
 
             {/* Trust strip */}
             <div className="mt-9 pt-6 border-t-2 border-brand-dark/10">
-              <div className="flex flex-wrap items-end gap-x-6 sm:gap-x-10 gap-y-5">
+              <div className="grid grid-cols-3 items-end gap-x-3 sm:gap-x-8">
                 <div>
                   <div className="flex items-center gap-1 mb-1">
                     {[...Array(5)].map((_, i) => (
@@ -284,7 +284,7 @@ export default function HomePage() {
                     ))}
                   </div>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-3xl sm:text-5xl font-black tracking-tight leading-none">
+                    <span className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-none">
                       4.8
                     </span>
                     <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-brand-dark/60">
@@ -293,7 +293,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div>
-                  <div className="text-3xl sm:text-5xl font-black tracking-tight leading-none">
+                  <div className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-none">
                     21,000+
                   </div>
                   <div className="mt-1 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-brand-dark/60">
@@ -301,7 +301,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div>
-                  <div className="text-3xl sm:text-5xl font-black tracking-tight leading-none">
+                  <div className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-none">
                     1,700+
                   </div>
                   <div className="mt-1 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-brand-dark/60">
