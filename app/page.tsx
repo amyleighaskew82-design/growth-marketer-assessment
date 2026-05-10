@@ -156,7 +156,7 @@ export default function HomePage() {
           </div>
           <button
             onClick={scrollToForm}
-            className="bg-brand-green hover:brightness-95 text-brand-dark font-bold px-3 sm:px-5 py-2.5 text-sm sm:text-base transition flex items-center gap-1.5"
+            className="bg-brand-green hover:brightness-95 text-brand-dark font-bold px-3 sm:px-5 py-2.5 text-sm sm:text-base transition flex items-center gap-1.5 whitespace-nowrap"
           >
             Start Your $7 Trial
             <ArrowRight className="w-4 h-4" strokeWidth={3} />
@@ -273,7 +273,7 @@ export default function HomePage() {
 
             {/* Trust strip */}
             <div className="mt-9 pt-6 border-t-2 border-brand-dark/10">
-              <div className="flex flex-wrap items-end gap-x-8 sm:gap-x-10 gap-y-5">
+              <div className="flex flex-wrap items-end gap-x-6 sm:gap-x-10 gap-y-5">
                 <div>
                   <div className="flex items-center gap-1 mb-1">
                     {[...Array(5)].map((_, i) => (
@@ -284,7 +284,7 @@ export default function HomePage() {
                     ))}
                   </div>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-4xl sm:text-5xl font-black tracking-tight leading-none">
+                    <span className="text-3xl sm:text-5xl font-black tracking-tight leading-none">
                       4.8
                     </span>
                     <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-brand-dark/60">
@@ -293,7 +293,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div>
-                  <div className="text-4xl sm:text-5xl font-black tracking-tight leading-none">
+                  <div className="text-3xl sm:text-5xl font-black tracking-tight leading-none">
                     21,000+
                   </div>
                   <div className="mt-1 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-brand-dark/60">
@@ -301,7 +301,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div>
-                  <div className="text-4xl sm:text-5xl font-black tracking-tight leading-none">
+                  <div className="text-3xl sm:text-5xl font-black tracking-tight leading-none">
                     1,700+
                   </div>
                   <div className="mt-1 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-brand-dark/60">
@@ -320,8 +320,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* RIGHT: Layered visual stack */}
-          <div className="lg:col-span-5 relative z-10 lg:pt-2">
+          {/* RIGHT: Layered visual stack — hidden on mobile, shown desktop only */}
+          <div className="hidden lg:block lg:col-span-5 relative z-10 lg:pt-2">
             <div className="relative max-w-md mx-auto lg:mx-0 lg:ml-auto">
               {/* Top stat card */}
               <div className="bg-brand-green border-2 border-brand-dark p-6 sm:p-7">
@@ -444,7 +444,7 @@ export default function HomePage() {
             <div className="lg:col-span-5">
               <div className="relative max-w-sm mx-auto lg:mx-0">
                 <div className="absolute -top-3 -left-3 right-6 bottom-6 bg-brand-blue z-0" aria-hidden />
-                <div className="relative z-10 aspect-[4/5] border-2 border-brand-dark overflow-hidden bg-white">
+                <div className="relative z-10 aspect-[4/3] sm:aspect-[4/5] border-2 border-brand-dark overflow-hidden bg-white">
                   <Image
                     src={asset("/assets/img/eddie_4.webp")}
                     alt="Eddie Kang, MyEdSpace lead math teacher"
@@ -537,7 +537,7 @@ export default function HomePage() {
 
           <div className="mt-12 grid lg:grid-cols-3 border-2 border-white">
             {/* School */}
-            <div className="border-b-2 lg:border-b-0 lg:border-r-2 border-white p-6 sm:p-8 bg-white text-brand-dark">
+            <div className="border-b-2 border-brand-dark/20 lg:border-b-0 lg:border-r-2 lg:border-white p-6 sm:p-8 bg-white text-brand-dark">
               <div className="text-xs font-bold uppercase tracking-wider text-brand-dark/50">
                 School
               </div>
@@ -566,7 +566,7 @@ export default function HomePage() {
             </div>
 
             {/* Private tutors */}
-            <div className="border-b-2 lg:border-b-0 lg:border-r-2 border-white p-6 sm:p-8 bg-white text-brand-dark">
+            <div className="border-b-2 border-brand-dark/20 lg:border-b-0 lg:border-r-2 lg:border-white p-6 sm:p-8 bg-white text-brand-dark">
               <div className="text-xs font-bold uppercase tracking-wider text-brand-dark/50">
                 Private tutors
               </div>
@@ -684,7 +684,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="mt-12 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
+          <div className="mt-12 sm:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
             {featuredReviews.map((r) => (
               <ReviewCard key={r.name} review={r} />
             ))}
@@ -725,7 +725,7 @@ export default function HomePage() {
               </div>
 
               <div className="mt-5 flex items-end gap-4">
-                <span className="text-7xl sm:text-9xl font-black tracking-tighter leading-none">
+                <span className="text-5xl sm:text-7xl lg:text-9xl font-black tracking-tighter leading-none">
                   $7
                 </span>
                 <div className="pb-2 sm:pb-3">
